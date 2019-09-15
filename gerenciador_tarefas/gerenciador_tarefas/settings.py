@@ -76,8 +76,9 @@ WSGI_APPLICATION = 'gerenciador_tarefas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'gerenciador_tarefas',
+        'HOST': 'mongodb://localhost:27017/gerenciador_tarefas',
     }
 }
 
@@ -113,6 +114,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+LOGIN_URL = 'logar_usuario'
 
 
 # Static files (CSS, JavaScript, Images)
